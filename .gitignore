@@ -1,0 +1,20 @@
+# Environments & Local Database
+backend/.env
+backend/data.db
+backend/.venv/
+.env
+.env*.local
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Node modules & builds
+node_modules/
+.next/
+out/
+build/
+dist/
+.vercel
