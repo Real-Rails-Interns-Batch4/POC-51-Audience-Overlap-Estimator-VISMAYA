@@ -14,7 +14,7 @@ export function WhyThisMatters() {
           Without precise overlap models, multi-channel planning double-counts audiences, inflating reach estimates and wasting ad spend on redundant exposures.
         </p>
         <p>
-          Deduplicating these panels using stochastically mapped interest attributes ensures that ad dollars purchase <strong className="text-emerald-400 font-medium">incremental reach</strong>, maximizing distribution efficiency.
+          Deduplicating these panels using stochastically mapped interest attributes ensures that ad dollars purchase <strong className="text-cyan-400 font-medium">incremental reach</strong>, maximizing distribution efficiency.
         </p>
       </div>
     </div>

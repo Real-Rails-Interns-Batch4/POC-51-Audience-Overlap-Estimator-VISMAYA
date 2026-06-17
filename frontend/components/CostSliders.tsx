@@ -44,7 +44,7 @@ export function CostSliders({
 
         <div>
           <div className="flex justify-between text-xs mb-1">
-            <span className="text-emerald-400 font-medium">GDELT Budget</span>
+            <span className="text-cyan-400 font-medium">GDELT Budget</span>
             <span className="font-mono text-slate-300">
               ${gdeltBudget.toLocaleString()} ({gdPct.toFixed(0)}%)
             </span>
@@ -56,7 +56,7 @@ export function CostSliders({
             step="500"
             value={gdeltBudget}
             onChange={(e) => setGdeltBudget(Number(e.target.value))}
-            className="w-full h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+            className="w-full h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
           />
         </div>
       </div>

@@ -87,9 +87,9 @@ export function VennDiagram({
       .attr("cx", cxB)
       .attr("cy", cy)
       .attr("r", 0) // Start at 0 for animation
-      .attr("fill", "#10b981")
+      .attr("fill", "#06b6d4")
       .attr("fill-opacity", 0.15)
-      .attr("stroke", "#10b981")
+      .attr("stroke", "#06b6d4")
       .attr("stroke-width", 2)
       .attr("class", "cursor-pointer transition-colors duration-200 hover:fill-opacity-25");
 
@@ -121,7 +121,7 @@ export function VennDiagram({
       tooltip.style("opacity", 1)
         .html(`
           <div class="text-[10px] font-mono uppercase text-slate-500">GDELT Only</div>
-          <div class="text-xs font-mono font-bold text-emerald-400 mt-0.5">${(gdeltTotal - overlapTotal).toLocaleString()} readers</div>
+          <div class="text-xs font-mono font-bold text-cyan-400 mt-0.5">${(gdeltTotal - overlapTotal).toLocaleString()} readers</div>
           <div class="text-[9px] text-slate-400 mt-1">Total: ${gdeltTotal.toLocaleString()}</div>
         `);
     })

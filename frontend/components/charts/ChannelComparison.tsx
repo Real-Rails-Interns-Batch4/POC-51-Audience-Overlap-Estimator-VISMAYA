@@ -81,10 +81,10 @@ export function ChannelComparison({
         </div>
 
         {/* 2. GDELT Card */}
-        <div className="border border-slate-800 bg-slate-900/30 rounded-lg p-4 flex flex-col justify-between hover:border-emerald-500/50 transition">
+        <div className="border border-slate-800 bg-slate-900/30 rounded-lg p-4 flex flex-col justify-between hover:border-cyan-500/50 transition">
           <div>
             <div className="flex justify-between items-center">
-              <span className="text-[10px] uppercase font-mono tracking-wider text-emerald-400">GDELT Stream</span>
+              <span className="text-[10px] uppercase font-mono tracking-wider text-cyan-400">GDELT Stream</span>
               <span className="text-[9px] font-mono text-slate-500">ACTIVE</span>
             </div>
             <div className="mt-3">
@@ -103,7 +103,7 @@ export function ChannelComparison({
                 <span>{gdPct.toFixed(1)}%</span>
               </div>
               <div className="w-full h-1 bg-slate-800 rounded-full overflow-hidden">
-                <div className="h-full bg-emerald-500 rounded-full" style={{ width: `${gdPct}%` }} />
+                <div className="h-full bg-cyan-500 rounded-full" style={{ width: `${gdPct}%` }} />
               </div>
             </div>
 
@@ -113,7 +113,7 @@ export function ChannelComparison({
             </div>
             <div className="flex justify-between text-[10px] font-mono">
               <span className="text-slate-500">Cost / Reached User:</span>
-              <span className="text-emerald-400 font-bold">${gdCpr.toFixed(3)}</span>
+              <span className="text-cyan-400 font-bold">${gdCpr.toFixed(3)}</span>
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@ export function ChannelComparison({
             </div>
             <div className="bg-slate-900/60 border border-slate-800 rounded px-3 py-1.5 min-w-[100px] text-center">
               <span className="block text-[8px] uppercase tracking-wider font-mono text-slate-500">Waste Averted</span>
-              <span className="text-sm font-mono font-bold text-emerald-400">{overlapPct.toFixed(1)}%</span>
+              <span className="text-sm font-mono font-bold text-cyan-400">{overlapPct.toFixed(1)}%</span>
             </div>
           </div>
         </div>

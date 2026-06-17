@@ -77,7 +77,7 @@ export function AudienceSelector({
       </div>
 
       <div className="border-t border-slate-800/60 pt-4">
-        <h3 className="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-3">
+        <h3 className="text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-3">
           GDELT Media Cohort
         </h3>
         <div className="grid grid-cols-2 gap-3">
@@ -88,7 +88,7 @@ export function AudienceSelector({
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full rounded border border-slate-800 bg-slate-950 p-2 text-xs text-slate-300 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded border border-slate-800 bg-slate-950 p-2 text-xs text-slate-300 focus:border-cyan-500 focus:outline-none"
             >
               <option value="">All Categories</option>
               {categories.map((cat: string) => (
@@ -105,7 +105,7 @@ export function AudienceSelector({
             <select
               value={selectedGdeltRegion}
               onChange={(e) => setSelectedGdeltRegion(e.target.value)}
-              className="w-full rounded border border-slate-800 bg-slate-950 p-2 text-xs text-slate-300 focus:border-emerald-500 focus:outline-none"
+              className="w-full rounded border border-slate-800 bg-slate-950 p-2 text-xs text-slate-300 focus:border-cyan-500 focus:outline-none"
             >
               <option value="">All Regions</option>
               {gdeltRegions.map((reg: string) => (

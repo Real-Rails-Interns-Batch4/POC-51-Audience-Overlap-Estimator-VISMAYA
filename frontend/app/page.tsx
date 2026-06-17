@@ -203,7 +203,7 @@ export default function Dashboard() {
                 <span className="text-[9px] uppercase tracking-wider text-slate-500">
                   GDELT Readers
                 </span>
-                <span className="font-mono text-lg font-bold text-emerald-400 mt-1">
+                <span className="font-mono text-lg font-bold text-cyan-400 mt-1">
                   {overlapData ? overlapData.gdelt_total.toLocaleString() : "..."}
                 </span>
                 <span className="text-[9px] text-slate-600 mt-1">Target size</span>

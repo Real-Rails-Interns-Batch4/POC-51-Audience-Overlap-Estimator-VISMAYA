@@ -132,7 +132,7 @@ export function ReachCurveChart({
     svg.append("path")
       .datum(reachPoints)
       .attr("fill", "none")
-      .attr("stroke", "#10b981")
+      .attr("stroke", "#06b6d4")
       .attr("stroke-dasharray", "3,3")
       .attr("stroke-width", 1.5)
       .attr("d", lineGd);
@@ -194,7 +194,7 @@ export function ReachCurveChart({
         .attr("cx", xScale(gdeltBudget))
         .attr("cy", yScale(currentAllocation.gdelt_reach))
         .attr("r", 4)
-        .attr("fill", "#34d399")
+        .attr("fill", "#22d3ee")
         .attr("stroke", "#030712")
         .attr("stroke-width", 1.5);
     }
@@ -257,9 +257,9 @@ export function ReachCurveChart({
               <span class="text-blue-400 font-bold">${Math.round(d.linkedin_reach).toLocaleString()}</span>
             </div>
             <div class="flex items-center gap-1.5 text-[10px] font-mono">
-              <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+              <span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span>
               <span class="text-slate-400">GDELT:</span>
-              <span class="text-emerald-400 font-bold">${Math.round(d.gdelt_reach).toLocaleString()}</span>
+              <span class="text-cyan-400 font-bold">${Math.round(d.gdelt_reach).toLocaleString()}</span>
             </div>
             <div class="flex items-center gap-1.5 text-[10px] font-mono mt-0.5">
               <span class="h-1.5 w-1.5 rounded-full bg-purple-500"></span>
@@ -292,7 +292,7 @@ export function ReachCurveChart({
           LinkedIn
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="h-0.5 w-4 bg-emerald-500 inline-block border-t border-dashed"></span>
+          <span className="h-0.5 w-4 bg-cyan-500 inline-block border-t border-dashed"></span>
           GDELT
         </span>
         <span className="flex items-center gap-1.5">

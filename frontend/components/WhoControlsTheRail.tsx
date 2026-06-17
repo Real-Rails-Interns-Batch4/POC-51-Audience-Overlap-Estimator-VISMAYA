@@ -15,7 +15,7 @@ export function WhoControlsTheRail() {
             <strong className="text-blue-400 font-medium">Microsoft (LinkedIn)</strong>: Dominates the identity-verified professional database rail, controlling access to professional demand segments.
           </li>
           <li>
-            <strong className="text-emerald-400 font-medium">Global Media Indexers (GDELT/Google)</strong>: Monitor public discourse, tracking programmatic news networks, search feeds, and aggregators that dictate general consumption.
+            <strong className="text-cyan-400 font-medium">Global Media Indexers (GDELT/Google)</strong>: Monitor public discourse, tracking programmatic news networks, search feeds, and aggregators that dictate general consumption.
           </li>
         </ul>
         <p>
