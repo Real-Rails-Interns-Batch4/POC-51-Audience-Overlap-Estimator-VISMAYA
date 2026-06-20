@@ -174,7 +174,7 @@ export function ReachCurveChart({
       .attr("cy", yScale(currentAllocation.combined_reach))
       .attr("r", 5)
       .attr("fill", "#c084fc")
-      .attr("stroke", "#030712")
+      .attr("stroke", "#0B1117")
       .attr("stroke-width", 1.5);
 
     // Dot on LinkedIn (only if active)
@@ -184,7 +184,7 @@ export function ReachCurveChart({
         .attr("cy", yScale(currentAllocation.linkedin_reach))
         .attr("r", 4)
         .attr("fill", "#60a5fa")
-        .attr("stroke", "#030712")
+        .attr("stroke", "#0B1117")
         .attr("stroke-width", 1.5);
     }
 
@@ -195,7 +195,7 @@ export function ReachCurveChart({
         .attr("cy", yScale(currentAllocation.gdelt_reach))
         .attr("r", 4)
         .attr("fill", "#22d3ee")
-        .attr("stroke", "#030712")
+        .attr("stroke", "#0B1117")
         .attr("stroke-width", 1.5);
     }
 

@@ -129,9 +129,9 @@ export default function Dashboard() {
   } : {};
 
   return (
-    <div className="min-h-screen bg-[#030712] text-slate-100 flex flex-col font-sans antialiased">
+    <div className="min-h-screen bg-[#0B1117] text-slate-100 flex flex-col font-sans antialiased">
       {/* Top Navigation / Header */}
-      <header className="border-b border-slate-800 bg-[#030712]/95 px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-md">
+      <header className="border-b border-slate-800 bg-[#0B1117]/95 px-6 py-4 flex items-center justify-between sticky top-0 z-50 backdrop-blur-md">
         <div>
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
@@ -183,7 +183,7 @@ export default function Dashboard() {
       {!loadingChannels && !channelsError && (
         <div className="flex-1 grid grid-cols-1 lg:grid-cols-10 gap-6 p-6">
           {/* Main Visualization Stage (70%) */}
-          <main className="lg:col-span-7 flex flex-col gap-6">
+          <main className="lg:col-span-7 lg:border-r lg:border-slate-800 lg:pr-6 flex flex-col gap-6">
             
             {/* KPI Metrics Dashboard Bar */}
             <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-7 gap-3">

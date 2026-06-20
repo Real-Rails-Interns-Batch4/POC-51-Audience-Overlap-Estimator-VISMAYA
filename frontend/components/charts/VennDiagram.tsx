@@ -149,7 +149,7 @@ export function VennDiagram({
         .attr("width", 90)
         .attr("height", 36)
         .attr("rx", 4)
-        .attr("fill", "#030712")
+        .attr("fill", "#0B1117")
         .attr("stroke", "#4f46e5")
         .attr("stroke-width", 1)
         .attr("class", "cursor-pointer");
