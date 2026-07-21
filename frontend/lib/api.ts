@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
 export interface LinkedInFilters {
   industries?: string[];
@@ -16,28 +16,40 @@ export interface BudgetAllocation {
 }
 
 export async function fetchChannels() {
-  const res = await fetch(`${BASE_URL}/api/channels`);
-  if (!res.ok) {
-    throw new Error(`Failed to fetch channels: ${res.statusText}`);
+  const url = `${BASE_URL}/api/channels`;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      throw new Error(`HTTP error ${res.status}: ${res.statusText}`);
+    }
+    return await res.json();
+  } catch (err: any) {
+    console.error(`[API Error] Failed to fetch channels from ${url}:`, err);
+    throw new Error(`Failed to fetch channels from backend at ${url}. ${err.message || err}`);
   }
-  return res.json();
 }
 
 export async function fetchOverlap(linkedinFilters: LinkedInFilters, gdeltFilters: GDELTFilters) {
-  const res = await fetch(`${BASE_URL}/api/overlap`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      linkedin_filters: linkedinFilters,
-      gdelt_filters: gdeltFilters,
-    }),
-  });
-  if (!res.ok) {
-    throw new Error(`Failed to fetch overlap metrics: ${res.statusText}`);
+  const url = `${BASE_URL}/api/overlap`;
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        linkedin_filters: linkedinFilters,
+        gdelt_filters: gdeltFilters,
+      }),
+    });
+    if (!res.ok) {
+      throw new Error(`HTTP error ${res.status}: ${res.statusText}`);
+    }
+    return await res.json();
+  } catch (err: any) {
+    console.error(`[API Error] Failed to fetch overlap metrics from ${url}:`, err);
+    throw new Error(`Failed to fetch overlap metrics. ${err.message || err}`);
   }
-  return res.json();
 }
 
 export async function fetchReach(
@@ -45,21 +57,27 @@ export async function fetchReach(
   gdeltFilters: GDELTFilters,
   budgetAllocation: BudgetAllocation
 ) {
-  const res = await fetch(`${BASE_URL}/api/reach`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      linkedin_filters: linkedinFilters,
-      gdelt_filters: gdeltFilters,
-      budget_allocation: budgetAllocation,
-    }),
-  });
-  if (!res.ok) {
-    throw new Error(`Failed to fetch reach metrics: ${res.statusText}`);
+  const url = `${BASE_URL}/api/reach`;
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        linkedin_filters: linkedinFilters,
+        gdelt_filters: gdeltFilters,
+        budget_allocation: budgetAllocation,
+      }),
+    });
+    if (!res.ok) {
+      throw new Error(`HTTP error ${res.status}: ${res.statusText}`);
+    }
+    return await res.json();
+  } catch (err: any) {
+    console.error(`[API Error] Failed to fetch reach metrics from ${url}:`, err);
+    throw new Error(`Failed to fetch reach metrics. ${err.message || err}`);
   }
-  return res.json();
 }
 
 export async function downloadMediaPlan(
@@ -67,43 +85,55 @@ export async function downloadMediaPlan(
   gdeltFilters: GDELTFilters,
   budgetAllocation: BudgetAllocation
 ) {
-  const res = await fetch(`${BASE_URL}/api/media-plan/export`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      linkedin_filters: linkedinFilters,
-      gdelt_filters: gdeltFilters,
-      budget_allocation: budgetAllocation,
-    }),
-  });
-  if (!res.ok) {
-    throw new Error(`Failed to export media plan: ${res.statusText}`);
+  const url = `${BASE_URL}/api/media-plan/export`;
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        linkedin_filters: linkedinFilters,
+        gdelt_filters: gdeltFilters,
+        budget_allocation: budgetAllocation,
+      }),
+    });
+    if (!res.ok) {
+      throw new Error(`HTTP error ${res.status}: ${res.statusText}`);
+    }
+    const blob = await res.blob();
+    const blobUrl = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = blobUrl;
+    a.download = 'media_plan.csv';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.URL.revokeObjectURL(blobUrl);
+  } catch (err: any) {
+    console.error(`[API Error] Failed to export media plan from ${url}:`, err);
+    throw new Error(`Failed to export media plan. ${err.message || err}`);
   }
-  const blob = await res.blob();
-  const url = window.URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'media_plan.csv';
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  window.URL.revokeObjectURL(url);
 }
 
 export async function downloadSampleData() {
-  const res = await fetch(`${BASE_URL}/api/sample-data`);
-  if (!res.ok) {
-    throw new Error(`Failed to download sample data: ${res.statusText}`);
+  const url = `${BASE_URL}/api/sample-data`;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      throw new Error(`HTTP error ${res.status}: ${res.statusText}`);
+    }
+    const blob = await res.blob();
+    const blobUrl = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = blobUrl;
+    a.download = 'audience_sample.csv';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.URL.revokeObjectURL(blobUrl);
+  } catch (err: any) {
+    console.error(`[API Error] Failed to download sample data from ${url}:`, err);
+    throw new Error(`Failed to download sample data. ${err.message || err}`);
   }
-  const blob = await res.blob();
-  const url = window.URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'audience_sample.csv';
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  window.URL.revokeObjectURL(url);
 }
