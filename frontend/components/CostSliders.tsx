@@ -18,7 +18,7 @@ export function CostSliders({
   const gdPct = total > 0 ? (gdeltBudget / total) * 100 : 50;
 
   return (
-    <div className="space-y-4 rounded-lg border border-slate-800 bg-slate-900/40 p-4">
+    <div className="space-y-4 rounded-lg border border-white/[0.08] bg-[#0B1117] p-4">
       <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-300">
         Budget Allocation
       </h3>

@@ -200,7 +200,7 @@ export function VennDiagram({
   }, [linkedinTotal, gdeltTotal, overlapTotal, unionTotal, jaccardSimilarity]);
 
   return (
-    <div ref={containerRef} className="relative w-full h-full flex items-center justify-center bg-slate-950/20 rounded-lg p-4">
+    <div ref={containerRef} className="relative w-full h-full flex items-center justify-center bg-[#0B1117] border border-white/[0.08] rounded-lg p-4">
       <svg ref={svgRef} className="max-w-[450px] max-h-[280px]" />
       
       {/* Tooltip Overlay */}

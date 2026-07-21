@@ -276,7 +276,7 @@ export function ReachCurveChart({
   }, [reachPoints, currentAllocation, linkedinBudget, gdeltBudget]);
 
   return (
-    <div ref={containerRef} className="relative w-full h-full flex flex-col items-center bg-slate-950/20 rounded-lg p-2 min-h-[300px]">
+    <div ref={containerRef} className="relative w-full h-full flex flex-col items-center bg-[#0B1117] border border-white/[0.08] rounded-lg p-2 min-h-[300px]">
       <svg ref={svgRef} className="w-full max-h-[280px]" />
       
       {/* Tooltip Overlay */}

@@ -188,7 +188,7 @@ export default function Dashboard() {
             {/* KPI Metrics Dashboard Bar */}
             <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-7 gap-3">
               {/* LinkedIn Total */}
-              <div className="bg-slate-900/40 border border-slate-800/80 rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
+              <div className="bg-[#0B1117] border border-white/[0.08] rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
                 <span className="text-[9px] uppercase tracking-wider text-slate-500">
                   LinkedIn Cohort
                 </span>
@@ -199,7 +199,7 @@ export default function Dashboard() {
               </div>
 
               {/* GDELT Total */}
-              <div className="bg-slate-900/40 border border-slate-800/80 rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
+              <div className="bg-[#0B1117] border border-white/[0.08] rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
                 <span className="text-[9px] uppercase tracking-wider text-slate-500">
                   GDELT Readers
                 </span>
@@ -210,7 +210,7 @@ export default function Dashboard() {
               </div>
 
               {/* Overlap */}
-              <div className="bg-slate-900/40 border border-slate-800/80 rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
+              <div className="bg-[#0B1117] border border-white/[0.08] rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
                 <span className="text-[9px] uppercase tracking-wider text-slate-500">
                   Overlap Size
                 </span>
@@ -221,7 +221,7 @@ export default function Dashboard() {
               </div>
 
               {/* Union */}
-              <div className="bg-slate-900/40 border border-slate-800/80 rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
+              <div className="bg-[#0B1117] border border-white/[0.08] rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
                 <span className="text-[9px] uppercase tracking-wider text-slate-500">
                   Deduplicated
                 </span>
@@ -232,7 +232,7 @@ export default function Dashboard() {
               </div>
 
               {/* Jaccard */}
-              <div className="bg-slate-900/40 border border-slate-800/80 rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
+              <div className="bg-[#0B1117] border border-white/[0.08] rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
                 <span className="text-[9px] uppercase tracking-wider text-slate-500">
                   Jaccard Index
                 </span>
@@ -245,7 +245,7 @@ export default function Dashboard() {
               </div>
 
               {/* Combined Reach */}
-              <div className="bg-slate-900/40 border border-slate-800/80 rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
+              <div className="bg-[#0B1117] border border-white/[0.08] rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
                 <span className="text-[9px] uppercase tracking-wider text-slate-500">
                   Combined Reach
                 </span>
@@ -258,7 +258,7 @@ export default function Dashboard() {
               </div>
 
               {/* Cost Per Reached User */}
-              <div className="bg-slate-900/40 border border-slate-800/80 rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
+              <div className="bg-[#0B1117] border border-white/[0.08] rounded p-3 flex flex-col justify-between hover:border-slate-700 transition">
                 <span className="text-[9px] uppercase tracking-wider text-slate-500">
                   Efficiency
                 </span>
@@ -272,7 +272,7 @@ export default function Dashboard() {
             </div>
 
             {/* Main Stage Panel Area */}
-            <div className="flex-1 border border-slate-800/80 bg-slate-950/40 rounded-lg p-6 flex flex-col justify-between relative backdrop-blur-sm min-h-[460px]">
+            <div className="flex-1 border border-white/[0.08] bg-[#0B1117] rounded-lg p-6 flex flex-col justify-between relative backdrop-blur-sm min-h-[460px]">
               {/* Top corner terminal markers */}
               <div className="absolute top-3 left-3 text-[9px] font-mono text-slate-600 uppercase">
                 STAGE_VIEW // {activeTab.toUpperCase()}_TAB

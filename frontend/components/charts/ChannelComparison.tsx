@@ -37,13 +37,13 @@ export function ChannelComparison({
   const overlapPct = (linkedinReach + gdeltReach) > 0 ? (overlapAverted / (linkedinReach + gdeltReach)) * 100 : 0;
 
   return (
-    <div className="space-y-6 bg-slate-950/20 rounded-lg p-4">
+    <div className="space-y-6 bg-[#0B1117] rounded-lg p-4">
       
       {/* Side-by-side Channel Comparison Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         
         {/* 1. LinkedIn Card */}
-        <div className="border border-slate-800 bg-slate-900/30 rounded-lg p-4 flex flex-col justify-between hover:border-blue-500/50 transition">
+        <div className="border border-white/[0.08] bg-[#0B1117] rounded-lg p-4 flex flex-col justify-between hover:border-blue-500/50 transition">
           <div>
             <div className="flex justify-between items-center">
               <span className="text-[10px] uppercase font-mono tracking-wider text-blue-400">LinkedIn B2B</span>
@@ -81,7 +81,7 @@ export function ChannelComparison({
         </div>
 
         {/* 2. GDELT Card */}
-        <div className="border border-slate-800 bg-slate-900/30 rounded-lg p-4 flex flex-col justify-between hover:border-cyan-500/50 transition">
+        <div className="border border-white/[0.08] bg-[#0B1117] rounded-lg p-4 flex flex-col justify-between hover:border-cyan-500/50 transition">
           <div>
             <div className="flex justify-between items-center">
               <span className="text-[10px] uppercase font-mono tracking-wider text-cyan-400">GDELT Stream</span>
@@ -119,7 +119,7 @@ export function ChannelComparison({
         </div>
 
         {/* 3. Combined deduplicated Card */}
-        <div className="border border-indigo-900/50 bg-indigo-950/10 rounded-lg p-4 flex flex-col justify-between hover:border-indigo-500/50 transition">
+        <div className="border border-indigo-900/50 bg-[#0B1117] rounded-lg p-4 flex flex-col justify-between hover:border-indigo-500/50 transition">
           <div>
             <div className="flex justify-between items-center">
               <span className="text-[10px] uppercase font-mono tracking-wider text-purple-400">Combined Portfolio</span>

@@ -2,7 +2,7 @@ import React from "react";
 
 export function WhyThisMatters() {
   return (
-    <div className="rounded-lg border border-slate-800 bg-slate-900/50 p-4 backdrop-blur-sm">
+    <div className="rounded-lg border border-white/[0.08] bg-[#0B1117] p-4 backdrop-blur-sm">
       <h3 className="text-sm font-semibold tracking-wider text-slate-300 uppercase mb-3">
         Why This Matters
       </h3>

@@ -33,7 +33,7 @@ export function AudienceSelector({
   const gdeltRegions = gdelt?.filters?.regions || [];
 
   return (
-    <div className="space-y-5 rounded-lg border border-slate-800 bg-slate-900/40 p-4">
+    <div className="space-y-5 rounded-lg border border-white/[0.08] bg-[#0B1117] p-4">
       <div>
         <h3 className="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">
           LinkedIn Professional Cohort
